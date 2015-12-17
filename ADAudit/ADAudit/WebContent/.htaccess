@@ -1,0 +1,11 @@
+AuthUserFile C:\Users\AugustusR\Desktop\.htpasswd
+AuthName "Enter valid username and password"
+AuthType Basic
+require valid-user
+
+RewriteEngine on
+ 
+FallbackResource /ADAudit/index.php
+
+php_value max_input_vars 10000
+
