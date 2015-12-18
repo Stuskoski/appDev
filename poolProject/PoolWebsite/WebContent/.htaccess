@@ -1,0 +1,6 @@
+RewriteEngine on
+ 
+FallbackResource /PoolWebsite/index.php
+
+php_value max_input_vars 10000
+
