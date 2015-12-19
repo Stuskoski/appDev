@@ -4,7 +4,7 @@ class CartView{
 ?>
 		
 		<div class="center_content">
-			this is the cart view
+			<a href="models/cartActions.php?action=clearCart">Clear Cart</a>
 		</div>
 		
 <?php 

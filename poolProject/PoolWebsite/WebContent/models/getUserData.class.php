@@ -18,7 +18,7 @@ class getUserData{
 	public static function getCartContents(){
 		if(isset($_SESSION['numOfCartItems'])){
 			if($_SESSION['numOfCartItems'] > 0){
-				//handle cart items
+				echo "You have " . $_SESSION['numOfCartItems'] . " items";
 			}
 			else{
 				echo "Cart is empty";

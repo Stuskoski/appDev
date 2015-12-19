@@ -15,9 +15,25 @@ class HomeView{
         <div class="center_prod_box">
           <div class="product_title"><a href="">Test Title</a></div>
           <div class="product_img"><a href=""><img src="assets/images/testImg.png" width ="65" height="65" alt="" border="0" /></a></div>
-          <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
+          <div class="prod_price"><span class="reduce">350$</span> <span class="price">$50.49</span></div>
         </div>
-        <div class="prod_details_tab"> <a href="addToCart.php?id=1" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
+        <div class="prod_details_tab"> <a href="models/addToCart.php?productId=1" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="">Test Title</a></div>
+          <div class="product_img"><a href=""><img src="assets/images/testImg.png" width ="65" height="65" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="reduce">350$</span> <span class="price">$9.99</span></div>
+        </div>
+        <div class="prod_details_tab"> <a href="models/addToCart.php?productId=2" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="">Test Title</a></div>
+          <div class="product_img"><a href=""><img src="assets/images/testImg.png" width ="65" height="65" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="reduce">$1500.00</span> <span class="price">$999.99</span></div>
+        </div>
+        <div class="prod_details_tab"> <a href="models/addToCart.php?productId=3" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
       </div>
       <div class="prod_box">
         <div class="center_prod_box">
@@ -25,7 +41,7 @@ class HomeView{
           <div class="product_img"><a href=""><img src="assets/images/testImg.png" width ="65" height="65" alt="" border="0" /></a></div>
           <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
         </div>
-        <div class="prod_details_tab"> <a href="addToCart.php?id=2" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
+        <div class="prod_details_tab"> <a href="models/addToCart.php?productId=4" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
       </div>
       <div class="prod_box">
         <div class="center_prod_box">
@@ -33,7 +49,7 @@ class HomeView{
           <div class="product_img"><a href=""><img src="assets/images/testImg.png" width ="65" height="65" alt="" border="0" /></a></div>
           <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
         </div>
-        <div class="prod_details_tab"> <a href="addToCart.php?id=3" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
+        <div class="prod_details_tab"> <a href="models/addToCart.php?productId=5" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
       </div>
       <div class="prod_box">
         <div class="center_prod_box">
@@ -41,23 +57,7 @@ class HomeView{
           <div class="product_img"><a href=""><img src="assets/images/testImg.png" width ="65" height="65" alt="" border="0" /></a></div>
           <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
         </div>
-        <div class="prod_details_tab"> <a href="addToCart.php?id=4" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
-      </div>
-      <div class="prod_box">
-        <div class="center_prod_box">
-          <div class="product_title"><a href="">Test Title</a></div>
-          <div class="product_img"><a href=""><img src="assets/images/testImg.png" width ="65" height="65" alt="" border="0" /></a></div>
-          <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
-        </div>
-        <div class="prod_details_tab"> <a href="addToCart.php?id=5" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
-      </div>
-      <div class="prod_box">
-        <div class="center_prod_box">
-          <div class="product_title"><a href="">Test Title</a></div>
-          <div class="product_img"><a href=""><img src="assets/images/testImg.png" width ="65" height="65" alt="" border="0" /></a></div>
-          <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
-        </div>
-        <div class="prod_details_tab"> <a href="addToCart.php?id=6" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
+        <div class="prod_details_tab"> <a href="models/addToCart.php?productId=6" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
       </div>
       <div class="center_title_bar">Recomended Products</div>
       <div class="prod_box">
@@ -66,7 +66,7 @@ class HomeView{
           <div class="product_img"><a href=""><img src="assets/images/testImg.png" width ="65" height="65" alt="" border="0" /></a></div>
           <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
         </div>
-        <div class="prod_details_tab"> <a href="addToCart.php?id=1" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
+        <div class="prod_details_tab"> <a href="models/addToCart.php?productId=1" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
       </div>
       <div class="prod_box">
         <div class="center_prod_box">
@@ -74,7 +74,7 @@ class HomeView{
           <div class="product_img"><a href=""><img src="assets/images/testImg.png" alt="" border="0" /></a></div>
           <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
         </div>
-        <div class="prod_details_tab"> <a href="addToCart.php?id=2" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
+        <div class="prod_details_tab"> <a href="models/addToCart.php?productId=2" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
       </div>
       <div class="prod_box">
         <div class="center_prod_box">
@@ -82,7 +82,7 @@ class HomeView{
           <div class="product_img"><a href=""><img src="assets/images/testImg.png" alt="" border="0" /></a></div>
           <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
         </div>
-        <div class="prod_details_tab"> <a href="addToCart.php?id=3" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
+        <div class="prod_details_tab"> <a href="models/addToCart.php?productId=3" class="prod_buy">Add to Cart</a> <a href="" class="prod_details">Details</a> </div>
       </div>
     </div>
 		

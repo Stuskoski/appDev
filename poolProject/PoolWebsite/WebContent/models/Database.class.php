@@ -13,7 +13,7 @@ class Database {
 		if (!isset (self::$db) || self::$db == null) {
 			try {
 				$username = "root";
-				$password = "R8f34yuTR&%qw.";
+				$password = "";
 				self::$dbName = $dbName;
 				$dbspec = self::$dsn.self::$dbName.";charset=utf8";
 				self::$db = new PDO ($dbspec, $username, $password, self::$options);

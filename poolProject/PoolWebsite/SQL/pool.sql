@@ -33,8 +33,32 @@ CREATE TABLE Users (
   firstName			varchar (255) COLLATE utf8_unicode_ci,
   lastName 			varchar (255) COLLATE utf8_unicode_ci,
   password          varchar(40) COLLATE utf8_unicode_ci,
-  subscribed		int(1),
+  phoneNumber		varchar(20),
   PRIMARY KEY (uid)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE if EXISTS Orders;
+CREATE TABLE Orders (
+  oid				int(10) AUTO_INCREMENT,
+  firstName			varchar (255) COLLATE utf8_unicode_ci,
+  lastName 			varchar (255) COLLATE utf8_unicode_ci,
+  email				varchar (255) COLLATE utf8_unicode_ci,
+  notes				varchar (512) COLLATE utf8_unicode_ci,
+  phoneNumber		varchar(20),
+  status			varchar(20),
+  dateCreated       TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (oid)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE if EXISTS OrderedItems;
+CREATE TABLE OrderedItems (
+  orid				int(10) AUTO_INCREMENT,
+  iid				int(10),
+  oid				int(10),
+  dateCreated       TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (orid),
+  FOREIGN KEY (iid) REFERENCES Inventory(iid),
+  FOREIGN KEY (oid) REFERENCES Orders(oid)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 DROP TABLE if EXISTS Subscribers;
@@ -45,4 +69,9 @@ CREATE TABLE Subscribers (
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
-
+INSERT INTO inventory(description, iid, price, productName, quantity)
+VALUES('Product Description1','1','50.49','Chlorine Tablets','15');
+INSERT INTO inventory(description, iid, price, productName, quantity)
+VALUES('Product Description2','2','9.99','Pool Shade','100');
+INSERT INTO inventory(description, iid, price, productName, quantity)
+VALUES('Product Description3','3','999.99','Above Ground Pool 20x20','2');

@@ -36,6 +36,9 @@ if(isset($_POST['phoneNumberSignup'])){
 //check if passwords match
 if($password !== $passwordConfirm){
 	$_SESSION['signupError'] = 1;
+	header("Location:../signup");
+	Database::clearDB();
+	exit();
 }
 
 //sanitize time!
@@ -44,6 +47,8 @@ $lastName = htmlspecialchars($lastName);
 $email = htmlspecialchars($email);
 if(isset($phoneNumber)){
 	$phoneNumber = htmlspecialchars($phoneNumber);
+}else{
+	$phoneNumber=null;
 }
 $password = sha1($password);//sha1 basically santizes bc it becomes a string
 
@@ -74,14 +79,15 @@ if(!is_null($row['email'])){
 }
 
 //Insert user into database
-$insert = $dbh->prepare("INSERT INTO users(email, firstName, lastName, password)
-						 VALUES(:email, :firstName, :lastName, :password)");
+$insert = $dbh->prepare("INSERT INTO users(email, firstName, lastName, password, phoneNumber)
+						 VALUES(:email, :firstName, :lastName, :password, :phoneNumber)");
 
 //Bind the values.  Password has a 40 bc sha1 converts to a 40 char string
 $insert->bindParam ( ':email', $email, PDO::PARAM_STR );
 $insert->bindParam ( ':firstName', $firstName, PDO::PARAM_STR );
 $insert->bindParam ( ':lastName', $lastName, PDO::PARAM_STR );
 $insert->bindParam ( ':password', $password, PDO::PARAM_STR, 40);
+$insert->bindParam ( ':phoneNumber', $phoneNumber, PDO::PARAM_STR);
 
 //execute
 $insert->execute();
