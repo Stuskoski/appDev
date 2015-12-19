@@ -603,7 +603,7 @@ padding:10px 0 0 60px;
 .orderInput{
 	width:350px;
 	max-width:350px;
-	max-height:350px;
+	max-height:200px;
 }
 .orderTitle{
 	color:#199ECD;
@@ -621,6 +621,11 @@ padding:10px 0 0 60px;
     margin-top: 5px;
     padding: 2px 3px;
     width: 342px;
+}
+.orderList2{
+	width:350px;
+	max-width:350px;
+	max-height:150px;
 }
 .orderSubmit{
 	margin-left:145px;

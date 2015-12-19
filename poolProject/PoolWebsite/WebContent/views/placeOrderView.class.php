@@ -50,9 +50,9 @@ class placeOrderView{
 			<br>
 			<div>
 				<span class="orderTitle">Item List *Pulled From Your Cart*</span><br>
-				<div class="orderList">
-				<?php getUserData::getCartContents();?>
-				</div>
+				<textarea readonly class="orderList2"><?php getUserData::getCartContents();?></textarea>
+				
+				
 			</div>
 			<br>
 			<div>

@@ -1,4 +1,11 @@
 <?php
+/**
+ * These functions are for getting data from
+ * the users cart.  This file is similar
+ * to getUserData.class.php in models but this
+ * one is more graphical output while getUserData
+ * is more texual
+ */
 session_start();
 
 //Get is set, take the action from the url and act on it
@@ -11,6 +18,9 @@ if (isset($_GET['action'])){
 	switch($action){
 		case "clearCart":
 			clearCart();
+			break;
+		case "viewCart":
+			viewCart();
 			break;
 		default:
 			header("location:../cart");
@@ -27,7 +37,16 @@ if (isset($_GET['action'])){
 function clearCart(){
 	unset($_SESSION['numOfCartItems']);
 	unset($_SESSION['cartTotal']);
+	unset($_SESSION['cart']);
 	header("location:../cart");
+}
+
+function viewCart(){
+	if(isset($_SESSION['cart'])){
+		print_r($_SESSION['cart']);
+	}else{
+		echo "Your cart is empty";
+	}
 }
 	
 	

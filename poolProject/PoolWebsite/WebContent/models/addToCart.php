@@ -1,4 +1,5 @@
 <?php
+//dont forget to change default session timer for session variables in php.ini
 session_start();
 include 'Database.class.php';
 
@@ -56,6 +57,8 @@ function checkProduct($productId){
 				}else{
 					$_SESSION['cartTotal'] = $item['price'];
 				}
+				//add item to cart session variable
+				$_SESSION['cart'][]=$item['iid'];
 			}else{
 				//insufficient quantity
 				header("location:../views/itemMissingView.php");

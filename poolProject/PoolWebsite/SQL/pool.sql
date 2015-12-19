@@ -11,6 +11,7 @@ CREATE TABLE Inventory (
   price				float(10),
   quantity 			int(8),
   description		varchar (255) COLLATE utf8_unicode_ci,
+  category  		varchar (50) COLLATE utf8_unicode_ci,
   productPic		longblob,
   thumbnail			longblob,
   PRIMARY KEY (iid)
