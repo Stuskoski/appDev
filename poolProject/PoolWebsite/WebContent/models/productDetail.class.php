@@ -42,18 +42,25 @@ if (isset($_GET['productId'])){
 	
 	//everything checks out so far, so display information now.
 	?>
-	<img alt="No Picture Submitted" class="challengePic" style="width:360px;height:360px;" src="data:image/jpeg;base64,'.base64_encode( $row['submitPic'] ).'"/>
 		 <div class="center_content">
 		  <div class="productPic">
 		    <?php if(isset($itemInfo['productPic']) && $itemInfo['productPic']!==null){
-		    		echo '<img alt="Product Image" class="productPic" src="data:image/jpeg;base64,'.base64_encode( $itemInfo['productPic'] ).'"/>';
+		    		echo '<img alt="Product Image" border="1" class="productPic" src="data:image/jpeg;base64,'.base64_encode( $itemInfo['productPic'] ).'"/>';
 					}
 				  else{
-				  	?><img class="productPic" src="assets/images/productImgNotFound.png" alt="" border="0" /><?php 
+				  	?><img class="defaultProductPic" src="assets/images/productImgNotFound.png" alt="" border="1" /><?php 
 				  }?>
 		  </div>
+		  <span id="productNameDisplay" ><?php echo $itemInfo['productName'];?></span>
+		  <span id="productQuantityDisplay" >Quantity Left In Stock: <?php if($itemInfo['quantity'] < 0){echo "<b>"."0"."</b>"; }else{echo $itemInfo['quantity'];}?></span>
+		  <div class="buyProductDisplay"><a href="models/addToCart.php?productId=<?php echo $productId;?>" class="prod_buy">Add to Cart</a></div>
+		  <div class="containerTitle">Product Description:</div>
+		  <div class="container">
+		 	 <span class="textinside"><?php echo $itemInfo['description'];?></span>
+		  </div>	 
 		 </div>
 	<?php 
+	//Note** You can store html code so like a table for the product description if need be.
 	//if get is not set, redirect home
 	}else{
 		header("location:home");
