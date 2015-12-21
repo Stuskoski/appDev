@@ -630,3 +630,21 @@ padding:10px 0 0 60px;
 .orderSubmit{
 	margin-left:145px;
 }
+#onlineOrderWarning{
+	color:red;
+	margin-left:185px;
+	font-size:14px;
+}
+/*--------------------------Order Confirmation---------------*/
+#orderConfirmation1{
+	font-size:14px;
+	font-weight:bold;
+	margin-left:150px;
+	color:#199ECD;
+}
+#orderConfirmation2{
+	font-size:14px;
+	font-weight:bold;
+	margin-left:135px;
+	color:#199ECD;
+}

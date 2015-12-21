@@ -22,6 +22,9 @@ if (isset($_GET['action'])){
 		case "viewCart":
 			viewCart();
 			break;
+		case "clearCartAfterOrder":
+			clearCartAfterOrder();
+			break;
 		default:
 			header("location:../cart");
 	};
@@ -47,6 +50,14 @@ function viewCart(){
 	}else{
 		echo "Your cart is empty";
 	}
+}
+
+function clearCartAfterOrder(){
+	unset($_SESSION['numOfCartItems']);
+	unset($_SESSION['cartTotal']);
+	unset($_SESSION['cart']);
+	$_SESSION['orderConfirmed'] = 1;
+	header("location:../orderConfirmed");
 }
 	
 	

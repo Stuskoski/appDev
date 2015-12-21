@@ -141,7 +141,7 @@ class MasterView {
     <div class="left_footer"> <img src="assets/images/footer_logo.png" alt="" width="89" height="42"/> </div>
     <div class="center_footer"> PoolWebsite. All Rights Reserved 2015<br /><br>
       <img src="assets/images/payment.gif" alt="" /> </div>
-    <div class="right_footer"> <a href="home">home</a> <a href="about">about</a> <a href="contact">contact us</a> </div>
+    <div class="right_footer"> <a href="home">home</a> <a href="about">about</a> <a href="contact">contact us</a> <a href="suggestions">suggestions</a> </div>
   </div>
 </div>
 <!-- end of main_container -->

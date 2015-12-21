@@ -1,4 +1,7 @@
 <?php
+include 'Database.class.php';
+include 'sendEmail.class.php';
+
 /**
  * These functions are used to get data
  * from the users session. It's like the
@@ -26,11 +29,10 @@ class getUserData{
 	public static function getCartContents(){
 		if(isset($_SESSION['numOfCartItems'])){
 			if($_SESSION['numOfCartItems'] > 0){
-				echo "You have " . $_SESSION['numOfCartItems'] . " items\n";
 				if(isset($_SESSION['cart'])){
-					foreach($_SESSION['cart'] as $val){
-						echo $val . "\n";
-					}
+						//creates an array with the count of every key. Great function!
+						$numArray = array_count_values($_SESSION['cart']);
+						getUserData::convertIdToItem($numArray);
 				}
 			}
 			else{
@@ -40,6 +42,47 @@ class getUserData{
 			echo"Cart is empty";
 		}
 		
+	}
+	
+	//$flag determines if ID is printed with it.  Only used for when the order is placed.
+	public static function convertIdToItem($numArray, $flag=false){
+		
+		//this form of foreach gives you the key and the value.
+		foreach($numArray as $key => $num){
+		//get db connection
+		$dbh = Database::getDB();
+		
+		//prepare sql
+		$getItem = $dbh->prepare("SELECT productName, price
+								  FROM inventory
+								  WHERE iid=:key");
+		
+		//Bind parameters
+		$getItem->bindParam ( ':key', $key, PDO::PARAM_INT );
+		
+		//Execute
+		$getItem->execute();
+		
+		//Fetch the row to see if it exists
+		$item = $getItem->fetch (PDO::FETCH_ASSOC);
+		
+		//check if exists now, if it does print name, else print Item not available
+		if(isset($item['productName'])){
+			echo "($num)" . $item['productName'] . " - $" . $item['price']*$num;
+			if($flag){
+				echo "[ID=$key]";
+			}
+			echo "\n\n";
+
+		}
+		else{
+			echo "Item Not Available\n";
+		}
+		
+		//Remove db connection
+		Database::clearDB();
+		
+		}
 	}
 }
 ?>

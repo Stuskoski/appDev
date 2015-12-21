@@ -47,8 +47,10 @@ CREATE TABLE Orders (
   notes				varchar (512) COLLATE utf8_unicode_ci,
   phoneNumber		varchar(20),
   status			varchar(20),
+  customerID		int(10),
   dateCreated       TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (oid)
+  PRIMARY KEY (oid),
+  FOREIGN KEY (customerID) REFERENCES Users(uid)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 DROP TABLE if EXISTS OrderedItems;
@@ -56,6 +58,7 @@ CREATE TABLE OrderedItems (
   orid				int(10) AUTO_INCREMENT,
   iid				int(10),
   oid				int(10),
+  numberOrdered		int(4),
   dateCreated       TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (orid),
   FOREIGN KEY (iid) REFERENCES Inventory(iid),

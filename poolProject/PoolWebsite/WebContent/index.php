@@ -49,6 +49,14 @@
 			MasterView::show();
 			CartView::show();
 			break;
+		case "suggestions":
+			MasterView::show();
+			CartView::show();
+			break;
+		case "orderConfirmed":
+			MasterView::show();
+			orderConfirmationView::show();
+			break;
 		default:
 			MasterView::show();
 			HomeView::show();
