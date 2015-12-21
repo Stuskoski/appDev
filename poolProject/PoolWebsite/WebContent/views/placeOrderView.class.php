@@ -63,7 +63,7 @@ class placeOrderView{
 			<br>
 			<div>
 				<span class="orderTitle">Order Notes</span><br>
-				<textarea rows="4" cols="50" name="orderNotes" class="orderInput"></textarea>
+				<textarea rows="4" cols="50" name="orderNotes" class="orderInputTextBox"></textarea>
 			</div>
 			<br><br>
 			<input class="orderSubmit" type="submit" value="Submit" <?php if(isset($_SESSION['numOfCartItems'])){

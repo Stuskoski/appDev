@@ -605,6 +605,12 @@ padding:10px 0 0 60px;
 	max-width:350px;
 	max-height:200px;
 }
+.orderInputTextBox{
+	width:350px;
+	max-width:350px;
+	max-height:150px;
+	height:100px;
+}
 .orderTitle{
 	color:#199ECD;
 	font-weight: bold;
@@ -625,7 +631,8 @@ padding:10px 0 0 60px;
 .orderList2{
 	width:350px;
 	max-width:350px;
-	max-height:150px;
+	max-height:170px;
+	height:100px;
 }
 .orderSubmit{
 	margin-left:145px;

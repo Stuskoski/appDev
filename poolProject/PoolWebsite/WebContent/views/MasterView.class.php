@@ -65,7 +65,7 @@ class MasterView {
       <div class="title_box">Special Products</div>
       <div class="border_box">
         <div class="product_title"><a href="showProduct?productId=1">Chlorine Tablets</a></div>
-        <div class="product_img"><a href="showProduct?productId=1"><img src="assets/images/testImg.png" alt="" border="0" /></a></div>
+        <div class="product_img"><a href="showProduct?productId=1"><img src="assets/images/testImg.png" alt="" border="1"  /></a></div>
         <div class="prod_price"><span class="reduce">$350</span> <span class="price">$50.49</span></div>
       </div>
       <div class="title_box"><a class="title_box" href="newsletter">Newsletter</a></div>
@@ -100,7 +100,7 @@ class MasterView {
       <div class="title_box">What's new</div>
       <div class="border_box">
         <div class="product_title"><a href="showProduct?productId=2">Pool Shade</a></div>
-        <div class="product_img"><a href="showProduct?productId=2"><img src="assets/images/testImg.png" alt="" border="0" /></a></div>
+        <div class="product_img"><a href="showProduct?productId=2"><img src="assets/images/poolShade.jpg" width="80" height="80" border="1" alt="" border="0" /></a></div>
         <div class="prod_price"><span class="reduce">$35</span> <span class="price">$9.99</span></div>
       </div>
       <div class="title_box">Manufacturers</div>

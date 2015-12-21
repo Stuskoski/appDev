@@ -22,7 +22,7 @@ class HomeView{
       <div class="prod_box">
         <div class="center_prod_box">
           <div class="product_title"><a href="showProduct?productId=2">Pool Shade</a></div>
-          <div class="product_img"><a href="showProduct?productId=2"><img src="assets/images/testImg.png" width ="65" height="65" alt="" border="0" /></a></div>
+          <div class="product_img"><a href="showProduct?productId=2"><img src="assets/images/poolShade.jpg" width ="65" height="65" alt="" border="0" /></a></div>
           <div class="prod_price"><span class="reduce">$35$</span> <span class="price">$9.99</span></div>
         </div>
         <div class="prod_details_tab"> <a href="models/addToCart.php?productId=2" class="prod_buy">Add to Cart</a> <a href="showProduct?productId=2" class="prod_details">Details</a> </div>
