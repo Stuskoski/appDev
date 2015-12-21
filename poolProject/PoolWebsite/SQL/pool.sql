@@ -48,6 +48,7 @@ CREATE TABLE Orders (
   phoneNumber		varchar(20),
   status			varchar(20),
   customerID		int(10),
+  orderTotal		float(10),
   dateCreated       TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (oid),
   FOREIGN KEY (customerID) REFERENCES Users(uid)

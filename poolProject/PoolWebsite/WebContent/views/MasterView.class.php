@@ -20,7 +20,7 @@ class MasterView {
 <div id="main_container">
   <div id="header">
     <div id="logo"> <a href=""><img src="assets/images/logo.png" alt="" border="0" width="182" height="85" /></a> </div>
-    <div class="big_banner"> <a href="home"><img src="assets/images/bannerHolder.png" alt="" border="0" /></a> </div>
+    <div class="big_banner"> <a href="home"><img src="" alt="" border="0" /></a> </div>
   </div>
   <div id="main_content">
     <div id="menu_tab">
@@ -64,9 +64,9 @@ class MasterView {
       </ul>
       <div class="title_box">Special Products</div>
       <div class="border_box">
-        <div class="product_title"><a href="">Test Title</a></div>
-        <div class="product_img"><a href=""><img src="assets/images/testImg.png" alt="" border="0" /></a></div>
-        <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
+        <div class="product_title"><a href="showProduct?productId=1">Chlorine Tablets</a></div>
+        <div class="product_img"><a href="showProduct?productId=1"><img src="assets/images/testImg.png" alt="" border="0" /></a></div>
+        <div class="prod_price"><span class="reduce">$350</span> <span class="price">$50.49</span></div>
       </div>
       <div class="title_box"><a class="title_box" href="newsletter">Newsletter</a></div>
       <div class="border_box">
@@ -99,9 +99,9 @@ class MasterView {
       </div>
       <div class="title_box">What's new</div>
       <div class="border_box">
-        <div class="product_title"><a href="">Test Title</a></div>
-        <div class="product_img"><a href=""><img src="assets/images/testImg.png" alt="" border="0" /></a></div>
-        <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
+        <div class="product_title"><a href="showProduct?productId=2">Pool Shade</a></div>
+        <div class="product_img"><a href="showProduct?productId=2"><img src="assets/images/testImg.png" alt="" border="0" /></a></div>
+        <div class="prod_price"><span class="reduce">$35</span> <span class="price">$9.99</span></div>
       </div>
       <div class="title_box">Manufacturers</div>
       <ul class="left_menu">

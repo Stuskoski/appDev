@@ -6,6 +6,7 @@ session_start();
 //Start the first email function
 ob_start();
 
+try{
 //set and then sanitize post data
 $firstName = filter_var($_POST['firstNameOrder'], FILTER_SANITIZE_STRING);
 $lastName = filter_var($_POST['lastNameOrder'], FILTER_SANITIZE_STRING);
@@ -82,14 +83,17 @@ sendEmail::EmailCustomer($_POST['emailOrder'], "Order Confirmation", $output);
 $dbh = Database::getDB();
 
 //prepare statement
-$order = $dbh->prepare("INSERT INTO orders(firstName, lastName, email, notes, phoneNumber, status, customerID)
-						VALUES (:firstName, :lastName, :email, :notes, :phoneNumber, :status, :customerID)");
+$order = $dbh->prepare("INSERT INTO orders(firstName, lastName, email, notes, phoneNumber, status, customerID, orderTotal)
+						VALUES (:firstName, :lastName, :email, :notes, :phoneNumber, :status, :customerID, :orderTotal)");
 
 //create customerID if they are logged in and it exists
 $customerID = null;
 if(isset($_SESSION['user_id'])){
 	$customerID = $_SESSION['user_id'];
 }
+
+//Intialize every new order with the status of "New".
+//This will be changed in the admin console eventually.
 $status = "New";
 
 //bind parameters
@@ -100,12 +104,14 @@ $order->bindParam ( ':notes', $notes, PDO::PARAM_STR );
 $order->bindParam ( ':phoneNumber', $phone, PDO::PARAM_INT );
 $order->bindParam ( ':status', $status, PDO::PARAM_STR );
 $order->bindParam ( ':customerID', $customerID, PDO::PARAM_INT );
+$order->bindParam ( ':orderTotal', $_SESSION['cartTotal'], PDO::PARAM_INT );
 
 //execute
 $order->execute();
 
 //Get last ID inserted so you can create the foreign key inventory objects
 $lastID = $dbh->lastInsertId();
+echo $lastID;
 
 //this form of foreach gives you the key and the value. These are the foreign key orderItems.
 foreach($numArray as $itemId => $numOrdered){
@@ -116,7 +122,7 @@ foreach($numArray as $itemId => $numOrdered){
 	
 	//bind parameters
 	$orderedItems->bindParam ( ':iid', $itemId, PDO::PARAM_INT );
-	$orderedItems->bindParam ( ':oid', $$lastID, PDO::PARAM_INT );
+	$orderedItems->bindParam ( ':oid', $lastID, PDO::PARAM_INT );
 	$orderedItems->bindParam ( ':numberOrdered', $numOrdered, PDO::PARAM_INT );
 	
 	//execute
@@ -128,6 +134,19 @@ Database::clearDB();
 //Redirect to cartActions which will clear the cart after the order, then redirect to order confirmation page
 header("location:cartActions.php?action=clearCartAfterOrder");
 
+}catch(Exception $e){
+	header("location:../home");
+}
+
+/**
+ * I could insert the names of the product into orderitems but I feel that it is redundant data.
+ * So instead we'll put it in the admin console.  Here is the command you will use to find
+ * the name of the prouct and the amount ordered.
+ * SELECT i.productName, o.numberOrdered
+ * FROM ordereditems o
+ * JOIN inventory i
+ * ON o.iid = i.iid
+ */
 
 
 ?>

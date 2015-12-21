@@ -57,6 +57,10 @@
 			MasterView::show();
 			orderConfirmationView::show();
 			break;
+		case "showProduct":
+			MasterView::show();
+			productDetail::showProduct();
+			break;
 		default:
 			MasterView::show();
 			HomeView::show();
