@@ -119,9 +119,9 @@ public static function showFooter(){?>
 		        <!-- Footer -->
 		        <footer>
 		            <div class="row">
-		            	<div class="col-lg-6"></div>
+		            	<div class="col-lg-4"></div>
 		                <div class="col-lg-6">
-		                    <p>Copyright &copy; Your Website 2014</p>
+		                    <p>Copyright &copy; Your Website 2016 <a href="contact">Contact Us</a> | <a href="about">About</a> | Email us at <a href="mailto:stuskoski@yahoo.com?Subject=Web Contact" target="_top">Stuskoski@yahoo.com</a></p>
 		                </div>
 		            </div>
 		        </footer>

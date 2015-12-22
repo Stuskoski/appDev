@@ -100,3 +100,27 @@ body {
 	font-size:12px;
 	float:right;
 }
+/* ---------------About Page------------------*/
+.sideInfoLeft{
+	background-color:rgba(0,0,0,0.3);
+	color:white;
+	height:400px;
+	max-width:250px;
+	float:right;
+	margin-top:120px;
+}
+.sideInfoRight{
+	background-color:rgba(0,0,0,0.3);
+	color:white;
+	height:400px;
+	max-width:250px;
+	float:left;
+	margin-top:120px;
+}
+.centerInfo{
+	background-color:rgba(0,0,0,0.3);
+	color:white;
+	height:500px;
+	max-width:700px;
+	text-align: center;
+}
