@@ -14,6 +14,8 @@ CREATE TABLE Inventory (
   category  		varchar (50) COLLATE utf8_unicode_ci,
   productPic		longblob,
   thumbnail			longblob,
+  numOfReviews		int(5),
+  rating			float(3),
   PRIMARY KEY (iid)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 

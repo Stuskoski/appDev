@@ -61,6 +61,9 @@
 			MasterView::show();
 			productDetail::showProduct();
 			break;
+		case "test":
+			MasterView2::show();
+			break;
 		default:
 			MasterView::show();
 			HomeView::show();
