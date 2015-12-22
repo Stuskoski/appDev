@@ -52,3 +52,51 @@ body {
 footer {
     margin: 50px 0;
 }
+
+body {
+     background:url(../../assets/images/bg.jpg) repeat-x #e4e9ec top;
+}
+
+/* ---------------------------navbar----------------------------------*/
+.navbar-custom{
+	padding-top:5px;
+	padding-bottom:5px;
+}
+#password-form-nav{
+	max-height:25px;
+	
+}
+#email-form-nav{
+	max-height:25px;
+}
+.navbar-btn{
+	max-height:25px;
+	display: inline-block;
+    padding: 0px 12px;
+	margin-bottom: 8px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+    -ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+#nav-logout{
+	color:#b30000;
+	font-size:12px;
+}
+.loginError{
+	color:#b30000;
+	font-size:12px;
+	float:right;
+}

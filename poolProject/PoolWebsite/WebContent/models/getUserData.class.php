@@ -1,6 +1,6 @@
 <?php
-include 'Database.class.php';
-include 'sendEmail.class.php';
+include_once 'Database.class.php';
+include_once 'sendEmail.class.php';
 
 /**
  * These functions are used to get data

@@ -1,8 +1,7 @@
 <?php
-ob_start();
-session_start();
 class MasterView {
-  public static function show() {  		
+  public static function show() { 
+  	session_start();
 ?>
 
 <!DOCTYPE html>

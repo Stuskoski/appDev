@@ -14,58 +14,68 @@
 	
 	switch ($control) {
 		case "products":
-			MasterView::show();
+			MasterView::showHeader();
 			ProductsView::show();
+			MasterView::showFooter();
 			break;
 		case "specials":
-			MasterView::show();
+			MasterView::showHeader();
 			SpecialsView::show();
+			MasterView::showFooter();
 			break;
 		case "myaccount":
-			MasterView::show();
+			MasterView::showHeader();
 			AccountView::show();
+			MasterView::showFooter();
 			break;
 		case "signup":
-			MasterView::show();
+			MasterView::showHeader();
 			SignUpView::show();
+			MasterView::showFooter();
 			break;
 		case "placeOrder":
-			MasterView::show();
+			MasterView::showHeader();
 			placeOrderView::show();
+			MasterView::showFooter();
 			break;
 		case "confirmOrder":
-			MasterView::show();
+			MasterView::showHeader();
 			confirmOrderView::show();
+			MasterView::showFooter();
 			break;
 		case "contact":
-			MasterView::show();
+			MasterView::showHeader();
 			ContactView::show();
+			MasterView::showFooter();
 			break;
 		case "about":
-			MasterView::show();
+			MasterView::showHeader();
 			AboutView::show();
+			MasterView::showFooter();
 			break;
 		case "cart":
-			MasterView::show();
+			MasterView::showHeader();
 			CartView::show();
+			MasterView::showFooter();
 			break;
 		case "suggestions":
-			MasterView::show();
+			MasterView::showHeader();
 			CartView::show();
+			MasterView::showFooter();
 			break;
 		case "orderConfirmed":
-			MasterView::show();
+			MasterView::showHeader();
 			orderConfirmationView::show();
+			MasterView::showFooter();
 			break;
 		case "showProduct":
-			MasterView::show();
+			MasterView::showHeader();
 			productDetail::showProduct();
-			break;
-		case "test":
-			MasterView2::show();
+			MasterView::showFooter();
 			break;
 		default:
-			MasterView::show();
+			MasterView::showHeader();
 			HomeView::show();
+			MasterView::showFooter();
 	};
 ?>	
