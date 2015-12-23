@@ -26,13 +26,18 @@ class getUserData{
 			echo "0";
 		}
 	}
-	public static function getCartContents(){
+	public static function getCartContents($htmlFlag=0){
 		if(isset($_SESSION['numOfCartItems'])){
 			if($_SESSION['numOfCartItems'] > 0){
 				if(isset($_SESSION['cart'])){
 						//creates an array with the count of every key. Great function!
 						$numArray = array_count_values($_SESSION['cart']);
-						getUserData::convertIdToItem($numArray);
+						//calls the function below with html flag to output <br> instead of newlines.
+						if($htmlFlag){
+							getUserData::convertIdToItem($numArray,0,1);
+						}else{
+							getUserData::convertIdToItem($numArray);
+						}
 				}
 			}
 			else{
@@ -45,7 +50,7 @@ class getUserData{
 	}
 	
 	//$flag determines if ID is printed with it.  Only used for when the order is placed.
-	public static function convertIdToItem($numArray, $flag=false){
+	public static function convertIdToItem($numArray, $flag=false, $htmlFlag=0){
 		
 		//this form of foreach gives you the key and the value.
 		foreach($numArray as $key => $num){
@@ -72,8 +77,13 @@ class getUserData{
 			if($flag){
 				echo "[ID=$key]";
 			}
-			echo "\n\n";
-
+			//for html pages
+			if($htmlFlag){
+				echo"<br>";	
+			}else{
+				//for text areas
+				echo "\n\n";
+			}
 		}
 		else{
 			echo "Item Not Available\n";

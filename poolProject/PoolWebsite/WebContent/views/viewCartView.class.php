@@ -6,7 +6,7 @@ class viewCartView{
 			<div class="cartTitle" >Shopping Cart</div>
 		<?php
 		if(isset($_SESSION['cart'])){
-			print_r($_SESSION['cart']);
+			getUserData::getCartContents(1);
 		}else{
 			echo "Your cart is empty";
 		}
