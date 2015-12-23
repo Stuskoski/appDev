@@ -9,7 +9,7 @@ class HomeView{
 		        <div class="row">
 		
 		            <div class="col-md-3" style="margin-top: 20px;">
-		                <p class="lead">Shop Name</p>
+		                <a class="homeLinks" href="categories"><span style="display:block;"class="lead">Categories</span></a>
 		                <div class="list-group">
 		                    <a href="#" class="list-group-item">Chemicals</a>
 		                    <a href="#" class="list-group-item">Equipment</a>
@@ -19,7 +19,7 @@ class HomeView{
 		                    <a href="#" class="list-group-item">Hot Tubs</a>
 		                </div>
 		                
-		                 <p class="lead">Second Window</p>
+		                 <a class="homeLinks" href=""><span style="display:block;"class="lead">Second Window</span></a>
 		                <div class="list-group">
 		                    <a href="#" class="list-group-item">Chemicals</a>
 		                    <a href="#" class="list-group-item">Equipment</a>
@@ -45,13 +45,13 @@ class HomeView{
 		                            </ol>
 		                            <div class="carousel-inner">
 		                                <div class="item active">
-		                                    <img class="slide-image" src="assets/images/testImg.jpg" alt="">
+		                                    <a href="#"><img class="slide-image" src="assets/images/testImg.jpg" alt=""></a>
 		                                </div>
 		                                <div class="item">
-		                                    <img class="slide-image" src="assets/images/testImg2.png" alt="">
+		                                    <a href="#"><img class="slide-image" src="assets/images/testImg2.png" alt=""></a>
 		                                </div>
 		                                <div class="item">
-		                                    <img class="slide-image" src="assets/images/testImg3.jpg" alt="">
+		                                    <a href="#"><img class="slide-image" src="assets/images/testImg3.jpg" alt=""></a>
 		                                </div>
 		                            </div>
 		                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">

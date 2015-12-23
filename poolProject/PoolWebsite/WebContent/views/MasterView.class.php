@@ -32,12 +32,18 @@ class MasterView{
 		    <![endif]-->
 		
 		</head>
+		<script>
+		function clearCart(e)
+		{
+		    if(!confirm('Are you sure you want to clear your cart?'))e.preventDefault();
+		}
+		</script>
 		
 		<body>
 		
 		    <!-- Navigation -->
 		    <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom center" role="navigation">
-		        <div class="container navbar-inner">
+		        <div class="navbar-inner">
 		            <!-- Brand and toggle get grouped for better mobile display -->
 			            <div class="navbar-header">
 			                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -51,16 +57,32 @@ class MasterView{
 			            <!-- Collect the nav links, forms, and other content for toggling -->
 			            
 				            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="float:none;">
-				                <ul class="nav navbar-nav nav-center">
+				                <ul class="nav navbar-nav nav-center navList">
 				                	<li>
 				                        <a href="home">Home</a>
 				                    </li>
 				                    <li>
-				                        <a href="about">About</a>
+				                        <a href="placeOrder">Place Order</a>
 				                    </li>
-				                    <li>
-				                        <a href="contact">Contact</a>
-				                    </li>
+				                    <li class="dropdown">
+					                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop<span class="caret"></span></a>
+					                  <ul class="dropdown-menu">
+					                    <li class="dropdown-header">Shopping</li>
+					                    <li><a href="products">View All Products</a></li>
+					                    <li><a href="specials">Specials</a></li>
+					                    <li><a href="categories">Categories</a></li>
+					                  </ul>
+					                </li>
+					                 <li class="dropdown">
+					                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart<span class="caret"></span></a>
+					                  <ul class="dropdown-menu">
+					                    <li class="dropdown-header">Cart Options</li>
+					                    <li><a href="viewCart">View Cart</a></li>
+					                    <li><a href="models/cartActions.php?action=clearCart" onclick="clearCart(event)">Clear Cart</a></li>
+					                    <li><a href="placeOrder">Place Order</a></li>
+					                    <li><a href="models/testPage.php">Test Page</a></li>
+					                  </ul>
+					                </li>
 				                    <li class="dropdown">
 					                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Options<span class="caret"></span></a>
 					                  <ul class="dropdown-menu">
@@ -72,22 +94,16 @@ class MasterView{
 					                    <li class="dropdown-header">Browsing</li>
 					                    <li><a href="products">Products</a></li>
 					                    <li><a href="specials">Specials</a></li>
-					                  </ul>
-					                </li>
-					                <li class="dropdown">
-					                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart<span class="caret"></span></a>
-					                  <ul class="dropdown-menu">
-					                    <li class="dropdown-header">Cart Options</li>
-					                    <li><a href="models/cartActions.php?action=viewCart">View Cart</a></li>
-					                    <li><a href="models/cartActions.php?action=clearCart">Clear Cart</a></li>
-					                    <li><a href="placeOrder">Place Order</a></li>
-					                    <li><a href="models/testPage.php">Test Page</a></li>
+					                    <li role="separator" class="divider"></li>
+					                    <li class="dropdown-header">Information</li>
+					                    <li><a href="about">About</a></li>
+					                    <li><a href="contact">Contact Us</a></li>
 					                  </ul>
 					                </li>
 				                </ul>
 				                <?php if(!isset($_SESSION['user_session'])){?>
 				                <div>
-				                  <form class="navbar-form navbar-right pull-right" id="loginForm" action="models/loginUser.php" method="POST">
+				                  <form class="navbar-form navbar-right navbarGreeting" id="loginForm" action="models/loginUser.php" method="POST">
 						            <div class="form-group navbar-signin">
 						              <input id="email-form-nav" type="email" placeholder="Email" class="form-control" name="emailLogin" required>
 						            </div>
@@ -98,7 +114,7 @@ class MasterView{
 						          </form>
 						       </div>
 						       <?php }else{?>
-						       <div class="navbar-brand navbar-right pull-right">Welcome <?php echo $_SESSION['firstName'];?> <a id="nav-logout" href="models/logoutUser.php">Logout</a></div>
+						       <div class="navbar-brand navbar-right navbarGreeting">Welcome <?php echo $_SESSION['firstName'];?> <a id="nav-logout" href="models/logoutUser.php">Logout</a></div>
 						       <?php }    
 						       ?>
 				            </div>       
@@ -117,9 +133,6 @@ public static function showFooter(){?>
 		    <!-- /.container -->
 		
 		    <div class="container">
-		
-		        <hr>
-		
 		        <!-- Footer -->
 		        <footer>
 		            <div class="row">
@@ -129,7 +142,6 @@ public static function showFooter(){?>
 		                </div>
 		            </div>
 		        </footer>
-		
 		    </div>
 		    <!-- /.container -->
 		
@@ -138,17 +150,8 @@ public static function showFooter(){?>
 		
 		    <!-- Bootstrap Core JavaScript -->
 		    <script src="bootstrap/js/bootstrap.min.js"></script>
-		    
-		
-		</body>
-		
+		</body>	
 		</html>
-
-		
-		
-		
-		
-		
 		<?php 
 	}//end function
 }//end class

@@ -19,9 +19,9 @@ if (isset($_GET['action'])){
 		case "clearCart":
 			clearCart();
 			break;
-		case "viewCart":
-			viewCart();
-			break;
+		//case "viewCart":
+			//viewCart();
+			//break;
 		case "clearCartAfterOrder":
 			clearCartAfterOrder();
 			break;
@@ -41,7 +41,13 @@ function clearCart(){
 	unset($_SESSION['numOfCartItems']);
 	unset($_SESSION['cartTotal']);
 	unset($_SESSION['cart']);
-	header("location:../cart");
+	
+	//Gets the history of the user and sends them right back.
+	$previous = "javascript:history.go(-1)";
+	if(isset($_SERVER['HTTP_REFERER'])) {
+		$previous = $_SERVER['HTTP_REFERER'];
+	}
+	header("location:" . $previous);
 }
 
 function viewCart(){

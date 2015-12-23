@@ -99,6 +99,15 @@ body {
 	color:#b30000;
 	font-size:12px;
 	float:right;
+	margin-right:150px;
+}
+.navbarGreeting{
+	margin-right:150px;
+}
+/* ---------------Home Page------------------*/
+.homeLinks:link, .homeLinks:visited, .homeLinks:active{
+	text-decoration:none;
+	color: #003399;
 }
 /* ---------------About Page------------------*/
 .sideInfoLeft{
@@ -123,6 +132,8 @@ body {
 	height:600px;
 	max-width:600px;
 	text-align: center;
+	border:2px solid #5bc0de;
+	border-radius:10px;	
 }
 .aboutTextBox1{
 	color:black;
@@ -135,13 +146,15 @@ body {
 }
 /* ---------------Contact Page------------------*/
 .contactInfo{
-	margin-bottom:350px;
+	margin-bottom:300px;
 	background-color:rgba(0,0,0,0.3);
 	color:white;
 	text-align: center;
 	margin-top:50px;
 	padding-bottom:150px;
 	max-width:900px;
+	border:2px solid #5bc0de;	
+	border-radius:10px;
 }
 .spanContactInfoHeader{
 	font-weight:bold;
@@ -160,6 +173,9 @@ body {
 .signupContent{
 	text-align:center;
 	background-color:rgba(0,0,0,0.1);
+	border:2px solid #5bc0de;
+	border-radius:10px;
+	min-width:480px;
 }
 .signupInput{
 	width:450px;
@@ -168,4 +184,217 @@ body {
 }
 .signupError{
 	color:#ff0000;
+}
+/* ---------------Order Page------------------*/
+.orderTitle{
+	font-weight:bold;
+	font-size:16;
+
+}
+.orderContent{
+	text-align:center;
+	background-color:rgba(0,0,0,0.1);
+	border:2px solid #5bc0de;
+	border-radius:10px;
+	min-width:480px;
+}
+.orderInput{
+	max-width:450px;
+	min-width:350px;
+	border-radius:5px;
+	border:2px solid #5bc0de;	
+}
+#orderWarning{
+	color:black;
+	font-weight:bold;
+}
+.orderList2, .orderInputTextBox{
+	width:350px;
+	min-height:150px;
+	max-width:400px;
+	border:2px solid #5bc0de;	
+}
+/* ---------------OrderConfirmed Page------------------*/
+.orderConfirmedContent{
+	margin-top:60px;
+	padding-bottom:150px;
+	font-weight:bold;
+	font-size:18px;
+}
+/*----------------------TextInputs------------------------*/
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:grey;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:grey;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:grey;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:grey;
+}
+/* ---------------Product Detail Page------------------*/
+.productContent{
+	text-align:center;
+	background-color:rgba(0,0,0,0.1);
+	border:2px solid #5bc0de;
+	border-radius:10px;
+	padding-top:5px;
+	padding-left:5px;
+	max-width:650px;
+	position:relative;
+	min-height:300px;
+	margin-bottom:250px;
+	margin-top:50px;
+	
+}
+.productPic{
+	text-align:left;
+}
+.defaultProductPic{
+	max-height:250px;
+	max-width:250px;
+}
+.productPic2{
+	max-height:250px;
+	max-width:250px;
+}
+#productNameDisplay{
+	font-weight:bold;
+	position:absolute;
+	top:10;
+	right:10;
+	left:270;
+	text-align:left;
+	font-size:20;
+}
+#productQuantityDisplay{
+	position:absolute;
+	top:100;
+	left:270;
+	text-align:left;
+	font-weight:bold;
+}
+.buyProductDisplay{
+	position:absolute;
+	bottom:5;
+	right:5;
+}
+.productBackBtn{
+	position:absolute;
+	bottom:43;
+	right:5;
+}
+.productDescription{
+	position:absolute;
+	bottom:20;
+	left:10;
+	text-align:left;
+	font-weight:bold;
+	bottom: 0%; 
+	top:200;
+	right:100;
+}
+.productSelect{
+	position:absolute;
+	bottom:80;
+	right:5;
+}
+#Qty{
+	position:absolute;
+	bottom:80;
+	right:55;
+}
+/* ---------------Categories Page------------------*/
+.categoriesView{
+	margin-top:50px;
+	margin-bottom:150px;
+}
+.category1{
+	border:1px solid #fff;
+	display:inline;
+	margin-top:4px;
+}
+.category2{
+	border:1px solid #fff;
+	display:inline;
+	margin-top:4px;
+}
+.category3{
+	border:1px solid #fff;
+	display:inline;
+	margin-top:4px;
+}
+.category4{
+	border:1px solid #fff;
+	display:inline;
+	margin-top:4px;
+}
+.category5{
+	border:1px solid #fff;
+	display:inline;
+	margin-top:4px;
+}
+.category6{
+	border:1px solid #fff;
+	display:inline;
+	margin-top:4px;
+}
+.category7{
+	border:1px solid #fff;
+	display:inline;
+	margin-top:4px;
+}
+.category8{
+	border:1px solid #fff;
+	display:inline;
+	margin-top:4px;
+}
+.category9{
+	border:1px solid #fff;
+	display:inline;
+	margin-top:4px;
+}
+.category10{
+	border:1px solid #fff;
+	margin-top:4px;
+	display:inline;
+}
+/* ---------------Continue Page------------------*/
+.contQuestion{
+	font-weight:bold;
+	font-size:30;
+	
+}
+.contContainer{
+	margin-bottom:350px;
+	text-align:center;
+}
+.contBtn1{
+	margin-top:40px;
+	margin-right:10px;
+}
+.contBtn2{
+	margin-top:40px;
+	margin-left:10px;
+}
+/* ---------------Cart Page------------------*/
+.viewCart{
+	margin-bottom:350px;
+}
+.cartTitle{
+	font-weight:bold;
+	font-size:40;
+}
+.cartInfo{
+	text-align:right;
+	color:green;
+	font-weight:bold;
+	font-size:20;
+}
+.cartSep{
+	border-color:black;
 }

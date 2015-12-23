@@ -28,7 +28,9 @@ class placeOrderView{
 	}
 	</script>
 	
-	<div class="center_content">
+	<div class="row">
+	 <div class="col-lg-3 col-md-3 col-sm-2 col-xs-0"></div>
+	 <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 orderContent">
 		<div class="signupTitle">
 			<h1>Place Order</h1>
 		</div>
@@ -78,7 +80,8 @@ class placeOrderView{
 	<span id="orderWarning">Please allow at least 30 minutes for order to be completed before picking up.</span><br><br><br>
 	<span id="onlineOrderWarning">*****Online Ordering Coming Soon*****</span>
 	</div>
-
+	<div class="col-lg-3 col-md-3 col-sm-2 col-xs-0"></div>
+	</div>
 <?php 
 	//sendEmail::Email();
 	}

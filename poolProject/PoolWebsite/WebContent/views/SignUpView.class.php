@@ -4,8 +4,8 @@ class SignUpView{
 ?>
 
 	<div class="row">
-	 <div class="col-lg-4"></div>
-	 <div class="col-lg-4 signupContent">
+	 <div class="col-lg-4 col-md-4 col-sm-2 col-xs-0"></div>
+	 <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12 signupContent">
 		<div class="signupTitle">
 			<h1 style="font-size:48;">Signup Page</h1>
 		</div>
@@ -60,7 +60,7 @@ class SignUpView{
 									   }
 									   ?></span>
 	</div>
-	<div class="col-lg-4"></div>
+	<div class="col-lg-4 col-md-4 col-sm-2 col-xs-0"></div>
 	</div>
 
 <?php 

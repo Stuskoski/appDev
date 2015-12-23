@@ -4,31 +4,43 @@ session_start();
 include 'Database.class.php';
 
 //Check if the get value exists, else go back home.
-if(isset($_GET['productId'])){
-	$productId = $_GET['productId'];
+if(isset($_POST['productId']) && isset($_POST['quantity'])){
+	
+	//Filter numbers for now.  Might have to change if not only numbers
+	$productId = filter_var($_POST['productId'], FILTER_SANITIZE_NUMBER_INT);
+	$quantity = filter_var($_POST['quantity'], FILTER_SANITIZE_NUMBER_INT);
+	
 	if(isset($_SESSION['numOfCartItems'])){
 		//check if exists in database
-		checkProduct($productId);
+		checkProduct($productId, $quantity);
 		
-		$_SESSION['numOfCartItems']++;
+		$_SESSION['numOfCartItems'] += $quantity;
 	}
 	else{
 		//check if exists in database
-		checkProduct($productId);
+		checkProduct($productId, $quantity);
 		
-		$_SESSION['numOfCartItems'] = 1;
+		$_SESSION['numOfCartItems'] = $quantity;
 	}
 	
-	//redirect home when finished.  Will need to change this eventually to just go back to last page
-	header("location:../home");
+	//grab previous page
+	$previous = "javascript:history.go(-1)";
+	if(isset($_SERVER['HTTP_REFERER'])) {
+		$previous = $_SERVER['HTTP_REFERER'];
+	}
+	
+	//redirect to continue page, they decide if they want to order or go back.
+	$_SESSION['itemsAddedFlag'] = 1;
+	$_SESSION['previousAddress'] = $previous;
+	header("location:../continue");
 	
 }
 else{
-	//if a productID isn't set in get, redirect home
+	//if a productID and quantity isn't set in get, redirect home
 	header("location:../home");
 }
 
-function checkProduct($productId){
+function checkProduct($productId, $quantityAdded){
 	//connect to db
 	$dbh = Database::getDB();
 	
@@ -53,12 +65,14 @@ function checkProduct($productId){
 				//if item exists and has sufficient quantity, add price to cart total. Don't decrement here yet, wait till an order is placed. 
 				//First come first serve remember.
 				if(isset($_SESSION['cartTotal'])){
-					$_SESSION['cartTotal'] += $item['price'];
+					$_SESSION['cartTotal'] += ($item['price'] * $quantityAdded);
 				}else{
-					$_SESSION['cartTotal'] = $item['price'];
+					$_SESSION['cartTotal'] = ($item['price'] * $quantityAdded);
 				}
 				//add item to cart session variable
-				$_SESSION['cart'][]=$item['iid'];
+				for($i=1; $i<=$quantityAdded; $i++){
+					$_SESSION['cart'][]=$item['iid'];
+				}
 			}else{
 				//insufficient quantity
 				header("location:../views/itemMissingView.php");

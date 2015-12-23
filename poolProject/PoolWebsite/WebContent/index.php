@@ -73,6 +73,21 @@
 			productDetail::showProduct();
 			MasterView::showFooter();
 			break;
+		case "categories":
+			MasterView::showHeader();
+			categoriesView::show();
+			MasterView::showFooter();
+			break;
+		case "continue":
+			MasterView::showHeader();
+			continueOrCheckOutView::show();
+			MasterView::showFooter();
+			break;
+		case "viewCart":
+			MasterView::showHeader();
+			viewCartView::viewCart();
+			MasterView::showFooter();
+			break;
 		default:
 			MasterView::showHeader();
 			HomeView::show();
