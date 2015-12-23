@@ -9,6 +9,15 @@ class AboutView{
 	  <h1 style="text-align: center;">Uncle John's Pool Store</h1><br><br>
 	  <div id="storePic" class="container centerInfo">
 	   <img src="assets/images/poolStoreFront.jpg" alt="" border="0" width="500" height="450" />
+	   <div class="aboutTextBox1">We have two locations:<br>
+	   							  One at the corner of x and y<br>
+	   							  The Other at the corner of x2<br>
+	   							  and y2.  Stop on by!</div>
+	   <div class="aboutTextBox2">Our stores hours range on the<br>
+	   							  Days that I feel like working<br>
+	   							  and the days that I don't feel<br>
+	   							  like working...just kidding, I'm<br>
+	   							  always here...Stop on by!</div>
 	  </div>
 	 </div>
 	 <div class="col-lg-4">

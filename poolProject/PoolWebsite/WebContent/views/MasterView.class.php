@@ -2,6 +2,7 @@
 class MasterView{
 	public static function showHeader(){
 		session_start();
+		ob_start();
 		?>
 		<!DOCTYPE html>
 		<html lang="en">
@@ -51,6 +52,9 @@ class MasterView{
 			            
 				            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="float:none;">
 				                <ul class="nav navbar-nav nav-center">
+				                	<li>
+				                        <a href="home">Home</a>
+				                    </li>
 				                    <li>
 				                        <a href="about">About</a>
 				                    </li>
@@ -119,7 +123,7 @@ public static function showFooter(){?>
 		        <!-- Footer -->
 		        <footer>
 		            <div class="row">
-		            	<div class="col-lg-4"></div>
+		            	<div class="col-lg-3"></div>
 		                <div class="col-lg-6">
 		                    <p>Copyright &copy; Your Website 2016 <a href="contact">Contact Us</a> | <a href="about">About</a> | Email us at <a href="mailto:stuskoski@yahoo.com?Subject=Web Contact" target="_top">Stuskoski@yahoo.com</a></p>
 		                </div>

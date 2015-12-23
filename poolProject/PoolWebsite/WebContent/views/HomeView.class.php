@@ -8,7 +8,7 @@ class HomeView{
 		
 		        <div class="row">
 		
-		            <div class="col-md-3">
+		            <div class="col-md-3" style="margin-top: 20px;">
 		                <p class="lead">Shop Name</p>
 		                <div class="list-group">
 		                    <a href="#" class="list-group-item">Chemicals</a>
@@ -18,7 +18,19 @@ class HomeView{
 		                    <a href="#" class="list-group-item">Hardware and Parts</a>
 		                    <a href="#" class="list-group-item">Hot Tubs</a>
 		                </div>
+		                
+		                 <p class="lead">Second Window</p>
+		                <div class="list-group">
+		                    <a href="#" class="list-group-item">Chemicals</a>
+		                    <a href="#" class="list-group-item">Equipment</a>
+		                    <a href="#" class="list-group-item">Accessories</a>
+		                    <a href="#" class="list-group-item">Pool Floats</a>
+		                    <a href="#" class="list-group-item">Hardware and Parts</a>
+		                    <a href="#" class="list-group-item">Hot Tubs</a>
+		                </div>
 		            </div>
+		            
+		            
 		
 		            <div class="col-md-9">
 		

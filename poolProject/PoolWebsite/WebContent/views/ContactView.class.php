@@ -2,29 +2,18 @@
 class ContactView{
 	public static function show(){
 ?>
-	<style>
-	article h1{
-	font-size:25;
-	margin-left:190px;
-	color:#199ECD;
-	margin-bottom:55px;
-	}
-	</style>
-	<div class="center_content">
-		<article>
-		 <h1>
-		  Contact Information		
-		 </h1>
-		 <p class="contactInfo">
-		 Phone Number: (210)123-4567
-		 </p>
-		 <p class="contactInfo">
-		 Email Address: UncleJohn@Rutkoski.com
-		 </p>
-		 <p class="contactInfo">
-		 Address: 10000 ThisIsMyStore San Antonio, TX 78248
-		 </p>
-		</article>
+	<div class="row">
+	  <div class="col-lg-3 col-md-0 col-sm-0"></div>
+	  <div class="col-lg-4 col-md-12 col-sm-12">
+	    <div class="contactInfo container">
+	    <br><br><br>
+		  <span class="spanContactInfoHeader">Contact Information</span><br><br>
+		  <span class="spanContactInfo">Location: 100001 Northwest Military Drive</span><br><br>
+		  <span class="spanContactInfo">Phone Number: (210)123-4567</span><br><br>
+		  <span class="spanContactInfo">Email Address: UncleJohn@Rutkoski.com</span>
+	    </div>
+	  </div>
+	  <div class="col-lg-3 col-md-0 col-sm-0"></div>
 	</div>
 
 <?php 
