@@ -278,6 +278,17 @@ body {
 	text-align:left;
 	font-weight:bold;
 }
+#productPriceDisplay{
+	position:absolute;
+	top:160;
+	left:270;
+	text-align:left;
+	font-weight:bold;
+	color:green;
+	border:2px solid green;
+	padding: 3px 3px 3px 3px;
+	border-radius:5px;
+}
 .buyProductDisplay{
 	position:absolute;
 	bottom:5;
@@ -306,7 +317,7 @@ body {
 #Qty{
 	position:absolute;
 	bottom:80;
-	right:55;
+	right:60;
 }
 /* ---------------Categories Page------------------*/
 .categoriesView{

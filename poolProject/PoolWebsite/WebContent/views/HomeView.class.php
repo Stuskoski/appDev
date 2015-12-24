@@ -66,15 +66,15 @@ class HomeView{
 		                </div>
 		
 		                <div class="row">
-		
+							<!-- First Product Home Page -->
 		                    <div class="col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 		                            <img src="http://placehold.it/320x150" alt="">
 		                            <div class="caption">
-		                                <h4 class="pull-right">$24.99</h4>
-		                                <h4><a href="showProduct?productId=1">First Product</a>
+		                                <h4 class="pull-right">$50.49</h4>
+		                                <h4><a href="showProduct?productId=1">Chlorine Tablets</a>
 		                                </h4>
-		                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+		                                <p>This is the description</p>
 		                            </div>
 		                            <div class="ratings">
 		                                <p class="pull-right">15 reviews</p>
@@ -88,15 +88,15 @@ class HomeView{
 		                            </div>
 		                        </div>
 		                    </div>
-		
+							<!-- Second Product Home Page -->
 		                    <div class="col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 		                            <img src="http://placehold.it/320x150" alt="">
 		                            <div class="caption">
-		                                <h4 class="pull-right">$64.99</h4>
-		                                <h4><a href="showProduct?productId=2">Second Product</a>
+		                                <h4 class="pull-right">$9.99</h4>
+		                                <h4><a href="showProduct?productId=2">Pool Shade</a>
 		                                </h4>
-		                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		                                <p>This is a short description.</p>
 		                            </div>
 		                            <div class="ratings">
 		                                <p class="pull-right">12 reviews</p>
@@ -110,15 +110,15 @@ class HomeView{
 		                            </div>
 		                        </div>
 		                    </div>
-		
+							<!-- Third Product Home Page -->
 		                    <div class="col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 		                            <img src="http://placehold.it/320x150" alt="">
 		                            <div class="caption">
-		                                <h4 class="pull-right">$74.99</h4>
-		                                <h4><a href="showProduct?productId=3">Third Product</a>
+		                                <h4 class="pull-right">$999.99</h4>
+		                                <h4><a href="showProduct?productId=3" style="font-size: 13; font-weight:bold;">Above Ground Pool 20x20</a>
 		                                </h4>
-		                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		                                <p>This is a short description.</p>
 		                            </div>
 		                            <div class="ratings">
 		                                <p class="pull-right">31 reviews</p>
@@ -132,15 +132,15 @@ class HomeView{
 		                            </div>
 		                        </div>
 		                    </div>
-		
+							<!-- Fourth Product Home Page -->
 		                    <div class="col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 		                            <img src="http://placehold.it/320x150" alt="">
 		                            <div class="caption">
-		                                <h4 class="pull-right">$84.99</h4>
-		                                <h4><a href="showProduct?productId=4">Fourth Product</a>
+		                                <h4 class="pull-right">$25.99</h4>
+		                                <h4><a href="showProduct?productId=4">Chlorine Packets</a>
 		                                </h4>
-		                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		                                <p>This is a short description.</p>
 		                            </div>
 		                            <div class="ratings">
 		                                <p class="pull-right">6 reviews</p>
@@ -154,15 +154,15 @@ class HomeView{
 		                            </div>
 		                        </div>
 		                    </div>
-		
+							<!-- Fifth Product Home Page -->
 		                    <div class="col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 		                            <img src="http://placehold.it/320x150" alt="">
 		                            <div class="caption">
-		                                <h4 class="pull-right">$94.99</h4>
-		                                <h4><a href="showProduct?productId=5">Fifth Product</a>
+		                                <h4 class="pull-right">$79.99</h4>
+		                                <h4><a href="showProduct?productId=5">Pool Light</a>
 		                                </h4>
-		                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		                                <p>This is a short description.</p>
 		                            </div>
 		                            <div class="ratings">
 		                                <p class="pull-right">18 reviews</p>
@@ -176,15 +176,15 @@ class HomeView{
 		                            </div>
 		                        </div>
 		                    </div>
-		
+							<!-- Sixth Product Home Page -->
 		                    <div class="col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 		                            <img src="http://placehold.it/320x150" alt="">
 		                            <div class="caption">
-		                                <h4 class="pull-right">$94.99</h4>
-		                                <h4><a href="showProduct?productId=6">Sixth Product</a>
+		                                <h4 class="pull-right">$1.99</h4>
+		                                <h4><a href="showProduct?productId=6">Twizzlers</a>
 		                                </h4>
-		                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		                                <p>This is a short description.</p>
 		                            </div>
 		                            <div class="ratings">
 		                                <p class="pull-right">18 reviews</p>

@@ -63,6 +63,7 @@ if (isset($_GET['productId'])){
 		   </div>
 		   <span id="productNameDisplay" ><?php echo $itemInfo['productName'];?></span>
 		   <span id="productQuantityDisplay" >Quantity Left In Stock: <?php if($itemInfo['quantity'] < 0){echo "<b>"."0"."</b>"; }else{echo $itemInfo['quantity'];}?></span>
+		   <span id="productPriceDisplay" >$<?php echo $itemInfo['price'];?></span>
 		   <form method="POST" action="models/addToCart.php">
 		    <input type="hidden" name="productId" value="<?php echo $productId; ?>">
 		    <span id="Qty">Qty:</span>
