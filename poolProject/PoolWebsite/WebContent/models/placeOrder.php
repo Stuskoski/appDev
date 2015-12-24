@@ -62,7 +62,7 @@ $numArray = array_count_values($_SESSION['cart']);
 getUserData::convertIdToItem($numArray, false);
 
 //Echo the total of the order
-echo "Total = $" . $_SESSION['cartTotal'];
+echo "Total = $" . number_format($_SESSION['cartTotal'], 2);
 
 //Get all the contents from the output buffer
 $output=ob_get_clean();

@@ -49,7 +49,83 @@ class getUserData{
 		
 	}
 	
+	public static function shoppingCartProductName($htmlFlag=0){
+		if(isset($_SESSION['numOfCartItems'])){
+			if($_SESSION['numOfCartItems'] > 0){
+				if(isset($_SESSION['cart'])){
+					//creates an array with the count of every key. Great function!
+					$numArray = array_count_values($_SESSION['cart']);
+					//calls the function below with html flag to output <br> instead of newlines.
+					if($htmlFlag){
+						getUserData::convertIdToItem($numArray,0,2);
+					}else{
+						//getUserData::convertIdToItem($numArray);
+					}
+				}else{
+					echo "Cart is empty";
+				}
+			}
+			else{
+				echo "Cart is empty";
+			}
+		}else{
+			echo"Cart is empty";
+		}
+	
+	}
+	
+	public static function shoppingCartProductPrice($htmlFlag=0){
+		if(isset($_SESSION['numOfCartItems'])){
+			if($_SESSION['numOfCartItems'] > 0){
+				if(isset($_SESSION['cart'])){
+					//creates an array with the count of every key. Great function!
+					$numArray = array_count_values($_SESSION['cart']);
+					//calls the function below with html flag to output <br> instead of newlines.
+					if($htmlFlag){
+						getUserData::convertIdToItem($numArray,0,3);
+					}else{
+						//getUserData::convertIdToItem($numArray);
+					}
+				}else{
+					echo "Cart is empty";
+				}
+			}
+			else{
+				echo "Cart is empty";
+			}
+		}else{
+			echo"Cart is empty";
+		}
+	
+	}
+	
+	public static function shoppingCartProductQuantity($htmlFlag=0){
+		if(isset($_SESSION['numOfCartItems'])){
+			if($_SESSION['numOfCartItems'] > 0){
+				if(isset($_SESSION['cart'])){
+					//creates an array with the count of every key. Great function!
+					$numArray = array_count_values($_SESSION['cart']);
+					//calls the function below with html flag to output <br> instead of newlines.
+					if($htmlFlag){
+						getUserData::convertIdToItem($numArray,0,4);
+					}else{
+						//getUserData::convertIdToItem($numArray);
+					}
+				}else{
+					echo "Cart is empty";
+				}
+			}
+			else{
+				echo "Cart is empty";
+			}
+		}else{
+			echo"Cart is empty";
+		}
+	
+	}
+	
 	//$flag determines if ID is printed with it.  Only used for when the order is placed.
+	//htmlflag determines what is printed, if 2=name, 3=price, 4=quantity
 	public static function convertIdToItem($numArray, $flag=false, $htmlFlag=0){
 		
 		//this form of foreach gives you the key and the value.
@@ -73,16 +149,29 @@ class getUserData{
 		
 		//check if exists now, if it does print name, else print Item not available
 		if(isset($item['productName'])){
-			echo "($num)" . $item['productName'] . " - $" . $item['price']*$num;
-			if($flag){
-				echo "[ID=$key]";
-			}
-			//for html pages
-			if($htmlFlag){
-				echo"<br>";	
+			//these 3 ifs are only used for viewCartView.  Rest of function is for other guys
+			if($htmlFlag == 2){
+				echo $item['productName'];
+				echo "<br><br>";
+			}elseif ($htmlFlag == 3){
+				echo "$" . number_format(($item['price'] * $num), 2);
+				echo "<br><br>";
+			}elseif ($htmlFlag == 4){
+				echo $num;
+				echo "<br><br>";
 			}else{
-				//for text areas
-				echo "\n\n";
+				//For place order
+				echo "($num)" . $item['productName'] . " - $" . $item['price']*$num;
+				if($flag){
+					echo "[ID=$key]";
+				}
+				//for html pages
+				if($htmlFlag == 1){
+					echo"<br>";	
+				}else{
+					//for text areas
+					echo "\n\n";
+				}
 			}
 		}
 		else{

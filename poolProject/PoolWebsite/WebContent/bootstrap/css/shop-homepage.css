@@ -395,17 +395,26 @@ body {
 /* ---------------Cart Page------------------*/
 .viewCart{
 	margin-bottom:350px;
+	position:relative;
 }
 .cartTitle{
 	font-weight:bold;
 	font-size:40;
 }
 .cartInfo{
-	text-align:right;
 	color:green;
 	font-weight:bold;
 	font-size:20;
+	display:inline;
 }
 .cartSep{
 	border-color:black;
+}
+.cartProductName, .cartProductPrice
+, .cartProductQuantity{
+	display:inline;
+	font-weight:bold;
+}
+.shoppingCartOrder{
+	display:inline;
 }
