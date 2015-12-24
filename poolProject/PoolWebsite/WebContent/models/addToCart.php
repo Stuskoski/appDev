@@ -9,7 +9,6 @@ if(isset($_POST['productId']) && isset($_POST['quantity'])){
 	//Filter numbers for now.  Might have to change if not only numbers
 	$productId = filter_var($_POST['productId'], FILTER_SANITIZE_NUMBER_INT);
 	$quantity = filter_var($_POST['quantity'], FILTER_SANITIZE_NUMBER_INT);
-	
 	if(isset($_SESSION['numOfCartItems'])){
 		//check if exists in database
 		checkProduct($productId, $quantity);
