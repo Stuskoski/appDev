@@ -6,6 +6,7 @@
 
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    min-height:100%;
 }
 
 .slide-image {
@@ -49,25 +50,67 @@ body {
     color: #333;
 }
 
+/* ---------------------------------Footer---------------*/
 footer {
-    margin: 50px 0;
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    background-color: #000099;
+    padding-top: 0px;
+	border:0;
+	width: 100%;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif !important;
+	font-size: 14px !important;
+	color:white;
 }
+.site-footer{
+	background-image:url(../../assets/JohnImg/footer-bottom.png);
+	background-color:rgba(0,0,0,0.0) !important;
+	color:clear;
+}
+.site-info{
+	padding-top:10px;	
+	}
 
 body {
-     background:url(../../assets/images/bg.jpg) repeat-x #e4e9ec top;
+
+     background-color: #22a9e1;
+     background: #22a9e1;
+     background: -webkit-linear-gradient(left, #22a9e1 0%,#a9e6ff 50%,#0696d2 100%);
 }
 
 /* ---------------------------navbar----------------------------------*/
 .navbar-custom{
-	padding-top:5px;
-	padding-bottom:5px;
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    background-color: #ffffff;
+    height: 107px;
+    padding-top: 0px;
+	background-image:url(../../assets/JohnImg/header-bottom.jpg);
+	border:0;
+	color:black;
+}
+.navbar-btns-custom{
+	float:bottom;
+
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #21759b !important;
+    font-size:18px;
+    font-family: 'Open Sans', sans-serif !important;
+    text-shadow:none;
+    
 }
 #password-form-nav{
 	max-height:25px;
+	border:1px solid #21759b;
+
 	
 }
 #email-form-nav{
 	max-height:25px;
+	border:1px solid #21759b;
+
 }
 .navbar-btn{
 	max-height:25px;
@@ -88,7 +131,7 @@ body {
     -ms-user-select: none;
 	user-select: none;
 	background-image: none;
-	border: 1px solid transparent;
+	border: 1px solid #21759b;
 	border-radius: 4px;
 }
 #nav-logout{
@@ -192,11 +235,13 @@ body {
 
 }
 .orderContent{
+	margin-top:50px;
 	text-align:center;
 	background-color:rgba(0,0,0,0.1);
 	border:2px solid #5bc0de;
 	border-radius:10px;
 	min-width:480px;
+	margin-bottom:50px;
 }
 .orderInput{
 	max-width:450px;
@@ -322,7 +367,7 @@ body {
 /* ---------------Categories Page------------------*/
 .categoriesView{
 	margin-top:50px;
-	margin-bottom:150px;
+	margin-bottom:311px;
 }
 .category1{
 	border:1px solid #fff;

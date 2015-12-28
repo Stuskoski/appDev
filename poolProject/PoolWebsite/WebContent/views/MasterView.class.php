@@ -52,11 +52,11 @@ class MasterView{
 			                    <span class="icon-bar"></span>
 			                    <span class="icon-bar"></span>
 			                </button>
-			                 <a class="navbar-brand" id="websiteLogo" href="home">Uncle John's Pool Website</a>
+			                 <a class="navbar-brand" id="websiteLogo" href="home"><img src="assets/JohnImg/365-pool-spa-logo.png" class="header-image" alt="" /></a>
 			            </div>
 			            <!-- Collect the nav links, forms, and other content for toggling -->
 			            
-				            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="float:none;">
+				            <div class="collapse navbar-collapse navbar-btns-custom" id="bs-example-navbar-collapse-1" style="float:none;">
 				                <ul class="nav navbar-nav nav-center navList">
 				                	<li>
 				                        <a href="home">Home</a>
@@ -80,7 +80,7 @@ class MasterView{
 					                    <li><a href="viewCart">View Cart</a></li>
 					                    <li><a href="models/cartActions.php?action=clearCart" onclick="clearCart(event)">Clear Cart</a></li>
 					                    <li><a href="placeOrder">Place Order</a></li>
-					                    <li><a href="models/testPage.php">Test Page</a></li>
+					                    <li><a href="poolstore.html">Test Page</a></li>
 					                  </ul>
 					                </li>
 				                    <li class="dropdown">
@@ -132,17 +132,21 @@ public static function showFooter(){?>
 		    
 		    <!-- /.container -->
 		
-		    <div class="container">
+				<div class="site-footer">
+				<span>.</span>
+		        </div>
 		        <!-- Footer -->
 		        <footer>
+		        	
 		            <div class="row">
 		            	<div class="col-lg-3"></div>
-		                <div class="col-lg-6">
-		                    <p>Copyright &copy; Your Website 2016 <a href="contact">Contact Us</a> | <a href="about">About</a> | Email us at <a href="mailto:stuskoski@yahoo.com?Subject=Web Contact" target="_top">Stuskoski@yahoo.com</a></p>
+		                <div class="col-lg-6 site-info">
+		                    <p><strong>Open M-F 10:00am till 6:00pm  &middot; Sat 10:00am till 3:00pm  &middot;   Closed Sunday.<br><br>
+		                    <em>Need Help After Hours? Call (210) 277-8281 because we are often here late!</em></strong><br><br>
+		                    <a href="#">&copy;2015 365 Pool &amp; Spa. All Rights Reserved.</a></p>
 		                </div>
 		            </div>
 		        </footer>
-		    </div>
 		    <!-- /.container -->
 		
 		    <!-- jQuery -->
