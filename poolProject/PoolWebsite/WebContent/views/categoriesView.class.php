@@ -3,6 +3,7 @@ class categoriesView{
 	public static function show(){
 		?>
 		<div class="row">
+		<div class="wrapperCustom">
 		 <div class="col-lg-1"></div>
 		 <div class="col-lg-11">
 		  <h1 style="text-align: center; margin-top:40px; margin-left:-100px; font-size:54;">Categories</h1>
@@ -20,6 +21,7 @@ class categoriesView{
 		  </div>
 		 </div>
 		 <div class="col-lg-"></div>
+		 </div>
 		</div>
 		<?php 
 	}

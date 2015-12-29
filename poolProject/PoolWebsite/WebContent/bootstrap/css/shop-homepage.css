@@ -4,9 +4,11 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     min-height:100%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .slide-image {
@@ -49,24 +51,34 @@ body {
     padding: 9px;
     color: #333;
 }
-
+.wrapperCustom{
+	height:100%;
+}
+.backgroundHeader{
+	background-image:url(../../assets/JohnImg/background-lighter.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    height:100px;
+    margin-bottom:20px; 
+    margin-top:-2px;
+}
 /* ---------------------------------Footer---------------*/
 footer {
-    background-repeat: repeat-x;
-    background-position: center bottom;
     background-color: #000099;
-    padding-top: 0px;
 	border:0;
 	width: 100%;
 	text-align: center;
 	font-family: 'Open Sans', sans-serif !important;
 	font-size: 14px !important;
 	color:white;
+	bottom:0;
+	left:0;
 }
 .site-footer{
 	background-image:url(../../assets/JohnImg/footer-bottom.png);
 	background-color:rgba(0,0,0,0.0) !important;
 	color:clear;
+	width: 100%;
 }
 .site-info{
 	padding-top:10px;	
@@ -80,6 +92,20 @@ body {
 }
 
 /* ---------------------------navbar----------------------------------*/
+.navbar-btns-custom > ul{
+	margin-top:20px;
+}
+.navbarGreeting{
+	color: #21759b !important;
+    font-size:18px;
+    text-shadow:none !important;
+    margin-right:50px;
+}
+@media (max-width: 1150px) {
+	.navbar-btns-custom > ul{
+		margin-top:0px;
+	}
+}
 .navbar-custom{
     background-repeat: repeat-x;
     background-position: center bottom;
@@ -90,15 +116,16 @@ body {
 	border:0;
 	color:black;
 }
-.navbar-btns-custom{
-	float:bottom;
-
+@media (max-width: 350px) {
+	.navbar-custom{
+		height:150px;
+	}
 }
 .navbar-inverse .navbar-nav > li > a {
     color: #21759b !important;
     font-size:18px;
     font-family: 'Open Sans', sans-serif !important;
-    text-shadow:none;
+    text-shadow:none; 
     
 }
 #password-form-nav{
@@ -144,33 +171,138 @@ body {
 	float:right;
 	margin-right:150px;
 }
-.navbarGreeting{
-	margin-right:150px;
+@media (max-width: 768px) {
+	.navbar-collapse{
+	margin-top:50px;
+	background-color:rgba(255,255,255,0.8);
+		border:2px solid #5bc0de !important;
+	}
+	.navbar-toggle{
+		border:1px solid #5bc0de !important;
+		background-color:rgba(91,192,222,0.9);
+		float:right !important;
+		position:absolute;
+		right:0;
+	}
+	.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    	background-color:rgba(38,156,191,1.0);
+	}
+	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a{
+		color:black;
+		font-size:14px;
+		font-weight:bold;
+	}
+	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a{
+		color:black !important;	
+	}
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.open>a {
+    background-image: -webkit-linear-gradient(top,#5bc0de 0,#5bc0de 100%);
+    background-image: -o-linear-gradient(top,#5bc0de 0,#5bc0de 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#5bc0de),to(#5bc0de));
+    background-image: linear-gradient(to bottom,#5bc0de 0,#5bc0de 100%);
 }
 /* ---------------Home Page------------------*/
 .homeLinks:link, .homeLinks:visited, .homeLinks:active{
 	text-decoration:none;
 	color: #003399;
 }
+.homeContent{
+	margin-bottom:200px;
+	height:auto;
+}
+
 /* ---------------About Page------------------*/
-.sideInfoLeft{
-	background-color:rgba(0,0,0,0.3);
-	color:white;
-	height:400px;
-	max-width:250px;
-	float:right;
-	margin-top:120px;
+.aboutContent{
+	background-color:rgba(255,255,255,1.0);
+	border-radius:15px;
+	margin-left:15px;
+	margin-right:15px;
+	position:relative;
+	width:98%;
+	height: auto;
+	min-height: 100% !important;
 }
-.sideInfoRight{
-	background-color:rgba(0,0,0,0.3);
-	color:white;
-	height:400px;
-	max-width:250px;
+.about1{
+	margin-top:10px;
 	float:left;
-	margin-top:120px;
+	min-width:50;
+	max-width:1050px;
 }
+.about2{
+	float:left;
+	max-width:1050px;
+}
+.about3{
+	float:left;
+	max-width:450px;
+	margin-right:350px;
+}
+.about4{
+	float:left;
+	max-height:500;
+	max-width:800;
+	text-align: center;
+	display:inline;
+}
+.about45{
+	display:inline;
+}
+.about5{
+	float:left;
+	max-height:700;
+	max-width:1000;
+	margin-right:10px;
+	display:inline;
+	margin-bottom:10px;
+}
+.about5 > iframe{
+	width:100%;
+	height:80%;
+}
+.about5 .aboutCenterTitle{
+	line-height: 1.6;
+	font-size:36;
+	color: #4456d5!important;
+	font-weight: 700!important;
+	background-image: url(../../assets/JohnImg/separator2.png);
+	background-repeat: no-repeat;
+    background-position: left bottom;
+    padding-bottom: 5px;
+    font-family: 'Sansita One';
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+	float:left;
+	width:100%;
+	margin-bottom:10px;
+}
+
+@media(max-width: 710px){
+	.aboutMap > iframe{
+		height:300;
+		width:450;
+	}
+}
+@media(max-width: 450px){
+	.aboutMap > iframe{
+		height:225;
+		width:250;
+	}
+}
+.aboutHeading{
+	text-align:center;
+	color: #000099!important;
+    font-size: 60px!important;
+    font-weight: 700!important;
+    padding: 20px 0;
+    font-family: 'Sansita One';
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+
 .centerInfo{
-	background-color:rgba(0,0,0,0.1);
 	color:white;
 	height:600px;
 	max-width:600px;
@@ -211,14 +343,14 @@ body {
 .signupTitle{
 	font-weight:bold;
 	font-size:16;
-
 }
 .signupContent{
 	text-align:center;
-	background-color:rgba(0,0,0,0.1);
+	background-color:rgba(0,0,0,0.3);
 	border:2px solid #5bc0de;
 	border-radius:10px;
 	min-width:480px;
+	margin-top:80px;
 }
 .signupInput{
 	width:450px;
@@ -237,7 +369,7 @@ body {
 .orderContent{
 	margin-top:50px;
 	text-align:center;
-	background-color:rgba(0,0,0,0.1);
+	background-color:rgba(0,0,0,0.3);
 	border:2px solid #5bc0de;
 	border-radius:10px;
 	min-width:480px;
@@ -367,7 +499,6 @@ body {
 /* ---------------Categories Page------------------*/
 .categoriesView{
 	margin-top:50px;
-	margin-bottom:311px;
 }
 .category1{
 	border:1px solid #fff;
@@ -439,8 +570,9 @@ body {
 }
 /* ---------------Cart Page------------------*/
 .viewCart{
-	margin-bottom:350px;
+	margin-bottom:510px;
 	position:relative;
+	margin-top:100px;
 }
 .cartTitle{
 	font-weight:bold;

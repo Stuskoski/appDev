@@ -3,6 +3,7 @@ class SignUpView{
 	public static function show(){
 ?>
 
+	<div class="wrapperCustom">
 	<div class="row">
 	 <div class="col-lg-4 col-md-4 col-sm-2 col-xs-0"></div>
 	 <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12 signupContent">
@@ -62,7 +63,7 @@ class SignUpView{
 	</div>
 	<div class="col-lg-4 col-md-4 col-sm-2 col-xs-0"></div>
 	</div>
-
+</div>
 <?php 
 	}
 }

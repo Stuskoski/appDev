@@ -4,7 +4,7 @@ class HomeView{
 		?>
 		
       <!-- Page Content -->
-		    <div class="container" style="margin-top:80px;">
+		    <div class="container homeContent" style="margin-top:80px;">
 		
 		        <div class="row">
 		
@@ -177,7 +177,7 @@ class HomeView{
 		                        </div>
 		                    </div>
 							<!-- Sixth Product Home Page -->
-		                    <div class="col-sm-4 col-lg-4 col-md-4">
+		                    <div class="col-sm-4 col-lg-4 col-md-4 testme">
 		                        <div class="thumbnail">
 		                            <img src="http://placehold.it/320x150" alt="">
 		                            <div class="caption">

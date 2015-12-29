@@ -23,6 +23,8 @@ class MasterView{
 		
 		    <!-- Custom CSS -->
 		    <link href="bootstrap/css/shop-homepage.css" rel="stylesheet">
+		    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+		    <link href='https://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
 		
 		    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -129,15 +131,11 @@ class MasterView{
 		<?php 
 	}
 public static function showFooter(){?>
-		    
-		    <!-- /.container -->
-		
 				<div class="site-footer">
-				<span>.</span>
-		        </div>
+					<span>.</span>
+			        </div>
 		        <!-- Footer -->
 		        <footer>
-		        	
 		            <div class="row">
 		            	<div class="col-lg-3"></div>
 		                <div class="col-lg-6 site-info">

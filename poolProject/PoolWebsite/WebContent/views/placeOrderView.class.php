@@ -27,8 +27,8 @@ class placeOrderView{
 	    if(!confirm('Are you ready to order?'))e.preventDefault();
 	}
 	</script>
-	
 	<div class="row">
+	<div class="wrapperCustom">
 	 <div class="col-lg-3 col-md-3 col-sm-2 col-xs-0"></div>
 	 <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 orderContent">
 		<div class="signupTitle">
@@ -81,6 +81,7 @@ class placeOrderView{
 	<span id="onlineOrderWarning">*****Online Ordering Coming Soon*****</span>
 	</div>
 	<div class="col-lg-3 col-md-3 col-sm-2 col-xs-0"></div>
+	</div>
 	</div>
 <?php 
 	//sendEmail::Email();
