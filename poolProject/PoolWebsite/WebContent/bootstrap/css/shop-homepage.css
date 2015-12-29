@@ -60,7 +60,7 @@ body {
     background-repeat: no-repeat;
     height:100px;
     margin-bottom:20px; 
-    margin-top:-2px;
+    margin-top:-3px;
 }
 /* ---------------------------------Footer---------------*/
 footer {
@@ -203,6 +203,15 @@ body {
     background-image: linear-gradient(to bottom,#5bc0de 0,#5bc0de 100%);
 }
 /* ---------------Home Page------------------*/
+.transition-timer-carousel-progress-bar {
+    height: 3px;
+    background-color:rgba(0,0,0,0.15);
+    width: 0%;
+    margin: 0px 0px 0px 0px;
+    border: none;
+    z-index: 11;
+    position: relative;
+}
 .homeLinks:link, .homeLinks:visited, .homeLinks:active{
 	text-decoration:none;
 	color: #003399;
@@ -210,6 +219,35 @@ body {
 .homeContent{
 	margin-bottom:200px;
 	height:auto;
+}
+.homePageSlideDots{
+	    border: 1px solid #0000cc !important;
+}
+
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #33ffff;
+}
+.homePageSlide{
+
+}
+.homeSlidePic{
+
+}
+.homeViewWords{
+	border: 1px solid black;
+    overflow: hidden;
+    font-size: 1em;
+}
+.mainPitch{
+	position:absolute;
+	top:20;
+}
+.homeImgBack{
+	
+    z-index: -1;
 }
 
 /* ---------------About Page------------------*/
@@ -321,12 +359,11 @@ body {
 }
 /* ---------------Contact Page------------------*/
 .contactInfo{
-	margin-bottom:300px;
 	background-color:rgba(0,0,0,0.3);
 	color:white;
 	text-align: center;
-	margin-top:50px;
-	padding-bottom:150px;
+	margin-top:7px;
+	padding-bottom:100px;
 	max-width:900px;
 	border:2px solid #5bc0de;	
 	border-radius:10px;
@@ -337,7 +374,7 @@ body {
 }
 .spanContactInfo{
 	font-weight:bold;
-	font-size:14px;
+	font-size:24px;
 }
 /* ---------------Signup Page------------------*/
 .signupTitle{
@@ -350,10 +387,10 @@ body {
 	border:2px solid #5bc0de;
 	border-radius:10px;
 	min-width:480px;
-	margin-top:80px;
 }
 .signupInput{
-	width:450px;
+	max-width:450px;
+	width:100%;
 	border-radius:5px;
 	border:2px solid #5bc0de;	
 }
@@ -367,13 +404,15 @@ body {
 
 }
 .orderContent{
-	margin-top:50px;
+	margin-top:7px;
 	text-align:center;
 	background-color:rgba(0,0,0,0.3);
 	border:2px solid #5bc0de;
 	border-radius:10px;
-	min-width:480px;
 	margin-bottom:50px;
+	margin-left:25px;
+	margin-right:25px;
+	padding-top:35px;
 }
 .orderInput{
 	max-width:450px;
@@ -498,7 +537,18 @@ body {
 }
 /* ---------------Categories Page------------------*/
 .categoriesView{
-	margin-top:50px;
+	margin-top:7px;
+	padding-bottom:325px;
+}
+@media (max-width: 990px) {
+	.categoriesView{
+		margin-left:100px;
+	}
+}
+@media (max-width: 450px) {
+	.categoriesView{
+		margin-left:15px;
+	}
 }
 .category1{
 	border:1px solid #fff;

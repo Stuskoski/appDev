@@ -86,7 +86,7 @@ class MasterView{
 					                  </ul>
 					                </li>
 				                    <li class="dropdown">
-					                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Options<span class="caret"></span></a>
+					                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other<span class="caret"></span></a>
 					                  <ul class="dropdown-menu">
 					                    <li class="dropdown-header">Nav header</li>
 					                    <li><a href="signup">Sign Up</a></li>
@@ -141,7 +141,7 @@ public static function showFooter(){?>
 		                <div class="col-lg-6 site-info">
 		                    <p><strong>Open M-F 10:00am till 6:00pm  &middot; Sat 10:00am till 3:00pm  &middot;   Closed Sunday.<br><br>
 		                    <em>Need Help After Hours? Call (210) 277-8281 because we are often here late!</em></strong><br><br>
-		                    <a href="#">&copy;2015 365 Pool &amp; Spa. All Rights Reserved.</a></p>
+		                    <a href="#">&copy;2015 365 Pool &amp; Spa. All Rights Reserved. </a>|<a href="about"> About Us </a>|<a href="Contact"> Contact</a></p>
 		                </div>
 		            </div>
 		        </footer>
@@ -152,6 +152,9 @@ public static function showFooter(){?>
 		
 		    <!-- Bootstrap Core JavaScript -->
 		    <script src="bootstrap/js/bootstrap.min.js"></script>
+		    
+		    <!-- Custom JS -->
+		    <script src="assets/js/custom.js"></script>
 		</body>	
 		</html>
 		<?php 

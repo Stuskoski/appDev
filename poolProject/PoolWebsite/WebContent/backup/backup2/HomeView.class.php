@@ -2,10 +2,13 @@
 class HomeView{
 	public static function show(){
 		?>
+		
       <!-- Page Content -->
-		    <div class="row homeContent" style="margin-top:80px;">
-		    		<div class="col-lg-1"></div>
-		            <div class="col-lg-2" style="margin-top: 20px;">
+		    <div class="container homeContent" style="margin-top:80px;">
+		
+		        <div class="row">
+		
+		            <div class="col-md-3" style="margin-top: 20px;">
 		                <a class="homeLinks" href="categories"><span style="display:block;"class="lead">Categories</span></a>
 		                <div class="list-group">
 		                    <a href="#" class="list-group-item">Chemicals</a>
@@ -29,26 +32,26 @@ class HomeView{
 		            
 		            
 		
-		            <div class="col-lg-8">
+		            <div class="col-md-9">
 		
 		                <div class="row carousel-holder">
 		
 		                    <div class="col-md-12">
-		                        <div id="carousel-example-generic" class="carousel slide homePageSlide" data-ride="carousel">
+		                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 		                            <ol class="carousel-indicators">
-		                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active homePageSlideDots"></li>
-		                                <li data-target="#carousel-example-generic" data-slide-to="1" class="homePageSlideDots"></li>
-		                                <li data-target="#carousel-example-generic" data-slide-to="2" class="homePageSlideDots"></li>
+		                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
 		                            </ol>
 		                            <div class="carousel-inner">
-		                                <div class="item active homeSlidePic">
-		                                    <a href="#"><img class="slide-image homeImgBack" src="assets/JohnImg/background.png" alt=""></a>
+		                                <div class="item active">
+		                                    <a href="#"><img class="slide-image" src="assets/images/testImg.jpg" alt=""></a>
 		                                </div>
-		                                <div class="item homeSlidePic">
-		                                    <a href="#"><img class="slide-image homeImgBack" src="assets/JohnImg/background.png" alt=""></a>
+		                                <div class="item">
+		                                    <a href="#"><img class="slide-image" src="assets/images/testImg2.png" alt=""></a>
 		                                </div>
-		                                <div class="item homeSlidePic">
-		                                    <a href="#"><img class="slide-image homeImgBack" src="assets/JohnImg/background.png" alt=""></a>
+		                                <div class="item">
+		                                    <a href="#"><img class="slide-image" src="assets/images/testImg3.jpg" alt=""></a>
 		                                </div>
 		                            </div>
 		                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -57,7 +60,6 @@ class HomeView{
 		                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
 		                                <span class="glyphicon glyphicon-chevron-right"></span>
 		                            </a>
-		                            <hr class="transition-timer-carousel-progress-bar" />                 
 		                        </div>
 		                    </div>
 		
@@ -65,7 +67,7 @@ class HomeView{
 		
 		                <div class="row">
 							<!-- First Product Home Page -->
-		                    <div class="col-sm-3 col-lg-3 col-md-3">
+		                    <div class="col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 		                            <img src="http://placehold.it/320x150" alt="">
 		                            <div class="caption">
@@ -87,7 +89,7 @@ class HomeView{
 		                        </div>
 		                    </div>
 							<!-- Second Product Home Page -->
-		                    <div class="col-sm-3 col-lg-3 col-md-3">
+		                    <div class="col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 		                            <img src="http://placehold.it/320x150" alt="">
 		                            <div class="caption">
@@ -109,7 +111,7 @@ class HomeView{
 		                        </div>
 		                    </div>
 							<!-- Third Product Home Page -->
-		                    <div class="col-sm-3 col-lg-3 col-md-3">
+		                    <div class="col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 		                            <img src="http://placehold.it/320x150" alt="">
 		                            <div class="caption">
@@ -131,7 +133,7 @@ class HomeView{
 		                        </div>
 		                    </div>
 							<!-- Fourth Product Home Page -->
-		                    <div class="col-sm-3 col-lg-3 col-md-3">
+		                    <div class="col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 		                            <img src="http://placehold.it/320x150" alt="">
 		                            <div class="caption">
@@ -153,7 +155,7 @@ class HomeView{
 		                        </div>
 		                    </div>
 							<!-- Fifth Product Home Page -->
-		                    <div class="col-sm-3 col-lg-3 col-md-3">
+		                    <div class="col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 		                            <img src="http://placehold.it/320x150" alt="">
 		                            <div class="caption">
@@ -175,7 +177,7 @@ class HomeView{
 		                        </div>
 		                    </div>
 							<!-- Sixth Product Home Page -->
-		                    <div class="col-sm-3 col-lg-3 col-md-3 testme">
+		                    <div class="col-sm-4 col-lg-4 col-md-4 testme">
 		                        <div class="thumbnail">
 		                            <img src="http://placehold.it/320x150" alt="">
 		                            <div class="caption">
@@ -196,58 +198,12 @@ class HomeView{
 		                            </div>
 		                        </div>
 		                    </div>
-		                    
-		                    <!-- Seventh Product Home Page -->
-		                    <div class="col-sm-3 col-lg-3 col-md-3 testme">
-		                        <div class="thumbnail">
-		                            <img src="http://placehold.it/320x150" alt="">
-		                            <div class="caption">
-		                                <h4 class="pull-right">$1.99</h4>
-		                                <h4><a href="showProduct?productId=6">Twizzlers</a>
-		                                </h4>
-		                                <p>This is a short description.</p>
-		                            </div>
-		                            <div class="ratings">
-		                                <p class="pull-right">18 reviews</p>
-		                                <p>
-		                                    <span class="glyphicon glyphicon-star"></span>
-		                                    <span class="glyphicon glyphicon-star"></span>
-		                                    <span class="glyphicon glyphicon-star"></span>
-		                                    <span class="glyphicon glyphicon-star"></span>
-		                                    <span class="glyphicon glyphicon-star-empty"></span>
-		                                </p>
-		                            </div>
-		                        </div>
-		                    </div>
-		                    
-		                    <!-- Eigth Product Home Page -->
-		                    <div class="col-sm-3 col-lg-3 col-md-3 testme">
-		                        <div class="thumbnail">
-		                            <img src="http://placehold.it/320x150" alt="">
-		                            <div class="caption">
-		                                <h4 class="pull-right">$1.99</h4>
-		                                <h4><a href="showProduct?productId=6">Twizzlers</a>
-		                                </h4>
-		                                <p>This is a short description.</p>
-		                            </div>
-		                            <div class="ratings">
-		                                <p class="pull-right">18 reviews</p>
-		                                <p>
-		                                    <span class="glyphicon glyphicon-star"></span>
-		                                    <span class="glyphicon glyphicon-star"></span>
-		                                    <span class="glyphicon glyphicon-star"></span>
-		                                    <span class="glyphicon glyphicon-star"></span>
-		                                    <span class="glyphicon glyphicon-star-empty"></span>
-		                                </p>
-		                            </div>
-		                        </div>
-		                    </div>
-		
-		
 		
 		                </div>
 		
 		            </div>
+		
+		        </div>
 		
 		    </div>
 		

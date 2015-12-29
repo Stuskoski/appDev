@@ -29,11 +29,13 @@ class placeOrderView{
 	</script>
 	<div class="row">
 	<div class="wrapperCustom">
+	<div class="col-lg-12">
+		 <div class="backgroundHeader">
+		  	<h1 class="aboutHeading">Place Order</h1><br><br>
+		  </div>
+	  </div>
 	 <div class="col-lg-3 col-md-3 col-sm-2 col-xs-0"></div>
 	 <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 orderContent">
-		<div class="signupTitle">
-			<h1>Place Order</h1>
-		</div>
 		<form action="models/placeOrder.php" method="POST">
 		<div class="loginForm">
 			<div>

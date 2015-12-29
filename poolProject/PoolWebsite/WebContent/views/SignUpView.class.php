@@ -3,13 +3,16 @@ class SignUpView{
 	public static function show(){
 ?>
 
-	<div class="wrapperCustom">
+	
 	<div class="row">
+	<div class="wrapperCustom">
+	 <div class="col-lg-12">
+	  <div class="backgroundHeader">
+		<h1 class="aboutHeading">Sign Up</h1><br><br>
+	  </div>
+	 </div>
 	 <div class="col-lg-4 col-md-4 col-sm-2 col-xs-0"></div>
 	 <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12 signupContent">
-		<div class="signupTitle">
-			<h1 style="font-size:48;">Signup Page</h1>
-		</div>
 		<form action="models/signupUser.php" method="POST">
 		<div class="loginForm">
 			<div>
