@@ -2,7 +2,7 @@
 	include("includer.php");   
 	$url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 	//echo "URL: $url <br>";
-	$urlPieces = split("/", $url);
+	$urlPieces = explode("/", $url);
 	
 	//print_r($urlPieces);
 	echo "<br>";
